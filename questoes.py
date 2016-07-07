@@ -2,22 +2,12 @@ from random import *
 def quest2():
         numero1 = int(input("Digite Numero 1: "))
         numero2 = int(input("Digite Numero 2: "))
+        multiplo = numero1 if numero1 > numero2 else numero2
 
-        if numero1 > numero2:
-            for i in range(1,numero2 + 1):
-                if numero1 % i == 0 and numero2 % i == 0:
-                    mmc = i
-                
-                else:
-                    mmc = numero1 * numero2
-        else:
-            for i in range(1,numero1 + 1):
-                if numero1 % i == 0 and numero2 % i == 0:
-                    mmc = i
-                    
-                else:
-                    mmc = numero1 * numero2
-        print("MMC = %d"%mmc)
+        while multiplo % numero1 != 0 or multiplo % numero2 != 0:
+                multiplo += 1
+        print("MMC = %d"%multiplo)
+
 
 def quest4():
         numero = float(input("Digite um numero: "))
