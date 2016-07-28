@@ -12,8 +12,10 @@ def listar_aluno(cadastro):
     for i in range(len(cadastro)):
         print("Nome: " + cadastro[i].get("Nome").upper() + " Idade: " + cadastro[i].get("Idade")+ " Sexo: " + cadastro[i].get("Sexo").upper())
     print("\n\n")
+    
 def main():
     cadastro = []
+    
     while True:
         print("***** CAD-ALUNOS *****")
         print("1 - Novo Aluno\n2 - Listar Alunos\n0 - Sair")
