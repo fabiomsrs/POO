@@ -1,8 +1,0 @@
-{'Nome': 'Volkswagen', 'id': '8', 'Country': 'Alemanha'}
-{'Nome': 'General', 'id': '7', 'Country': 'EUA'}
-{'Nome': 'Nissan', 'id': '6', 'Country': 'Japao'}
-{'Nome': 'Toyota', 'id': '5', 'Country': 'Japao'}
-{'Nome': 'renault', 'id': '4', 'Country': 'franca'}
-{'Nome': 'ferrari', 'id': '3', 'Country': 'italia'}
-{'Nome': 'Bmw', 'id': '2', 'Country': 'alemanha'}
-{'Nome': 'fiat', 'id': '1', 'Country': 'italia'}
