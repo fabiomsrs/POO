@@ -3,19 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package App;
+package app;
 
-import Domain.Quest;
+import domain.Quest;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 
-public class ExerciseCaelum {
-
-     public static void main(String []args){
+/**
+ *
+ * @author ClienteAOC
+ */
+public class ExerciseJava8 {
+    public static void main(String []args) throws IOException{
         int auxQ;
         do{
         String questao = JOptionPane.showInputDialog("Digite o numero da questao (1 a 5) digite 0 pra sair");
         auxQ = Integer.parseInt(questao);
+        
         switch (auxQ){
             case 1:
                 Quest.quest1();
@@ -32,24 +37,6 @@ public class ExerciseCaelum {
             case 5:
                 Quest.quest5();
                 break;                      
-            case 6:
-                Quest.quest6();
-                break;      
-            case 7:
-                Quest.quest7();
-                break;                
-            case 8:
-                Quest.quest8();
-                break;                
-            case 9:
-                Quest.quest9();
-                break;                
-            case 10:
-                Quest.quest10();
-                break;                
-            case 11:
-                Quest.quest11();
-                break;                                
             default:
                 if (auxQ == 0){
                     JOptionPane.showMessageDialog(null, "BYE");
@@ -59,7 +46,7 @@ public class ExerciseCaelum {
                 break;                      
                    
         }
-        }while(auxQ > 0 && auxQ <= 11);
+        }while(auxQ > 0 && auxQ <=5);
             
     }
 }
