@@ -147,7 +147,7 @@ public class Quest{
     }    
 
     public static void quest8(){
-        
+        /*questao 3 capitulo 3*/
         for(int cont = 3; cont > 0; cont--){
             if(login(JOptionPane.showInputDialog("Login: "),JOptionPane.showInputDialog("Senha: "))){
                 JOptionPane.showMessageDialog(null,"Login e senha aceitos");
@@ -170,6 +170,7 @@ public class Quest{
         
     }
     public static void quest9(){
+        /*questao 4 capitulo 3*/
         int numero = Integer.parseInt(JOptionPane.showInputDialog("Forneca Numero"));
         String aux = "";
         for(int cont = 1; cont < 11; cont++){
@@ -177,6 +178,6 @@ public class Quest{
         }
         JOptionPane.showMessageDialog(null, aux);
     }
-    
+    /*questao 5 capitulo 3: fazer um menu*/
     
 }
