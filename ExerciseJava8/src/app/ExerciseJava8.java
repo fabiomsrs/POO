@@ -37,6 +37,18 @@ public class ExerciseJava8 {
             case 5:
                 Quest.quest5();
                 break;                      
+            case 6:
+                Quest.quest6();
+                break;                                      
+            case 7:
+                Quest.quest7();
+                break;                 
+            case 8:
+                Quest.quest8();
+                break;                    
+            case 9:
+                Quest.quest9();
+                break;                                    
             default:
                 if (auxQ == 0){
                     JOptionPane.showMessageDialog(null, "BYE");
@@ -46,7 +58,7 @@ public class ExerciseJava8 {
                 break;                      
                    
         }
-        }while(auxQ > 0 && auxQ <=5);
+        }while(auxQ > 0 && auxQ <=9);
             
     }
 }

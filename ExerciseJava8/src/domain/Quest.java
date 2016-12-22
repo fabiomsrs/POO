@@ -100,4 +100,83 @@ public class Quest{
             return "Falta "+(30 - anosContribuicao)+" ano(s) de contribuicao para aposentadoria";
         }
     }
+    public static void quest6(){
+        /*questao 1 capitulo 3*/
+        JOptionPane.showMessageDialog(null, desconto(JOptionPane.showInputDialog("Nome do produto"), Double.parseDouble(JOptionPane.showInputDialog("Valor do produto"))));
+        
+    }
+    public static String desconto(String nomeProduto, double valor){
+        if (valor >= 50 && valor < 200){
+            return "Nome do produto: "+ nomeProduto +"\nValor original do produto: "+valor +"\nValor do produto com desconto: " +(valor -(valor * 5/100));
+        }
+        else if(valor >= 200 && valor < 500){
+            return "Nome do produto: "+ nomeProduto +"\nValor original do produto: "+valor +"\nValor do produto com desconto: " +(valor -(valor * 6/100));
+        }
+        else if(valor >= 500 && valor < 1000){
+            return "Nome do produto: "+ nomeProduto +"\nValor original do produto: "+valor +"\nValor do produto com desconto: " +(valor -(valor * 7/100));
+        }        
+        else if(valor >= 1000){
+            return "Nome do produto: "+ nomeProduto +"\nValor original do produto: "+valor +"\nValor do produto com desconto: " +(valor -(valor * 8/100));
+        }        
+        else if(valor < 0){
+            return "Valor invalido";
+        }        
+        return "Nome do produto: "+ nomeProduto +"\nValor original do produto: "+valor +"\nValor do produto com desconto: " +valor;
+        
+    }
+    public static void quest7(){
+        /*questao 2 capitulo 3*/
+        int[] r = new int[4];
+        for(int cont = 0; cont < 4; cont++){
+            r[cont] = Integer.parseInt(JOptionPane.showInputDialog("Digite resistencia numero " + (cont+1)));
+        }
+        JOptionPane.showMessageDialog(null,resistencia(r));
+    }
+    
+    public static String resistencia(int r[]){
+        int menor = r[0],maior = r[0],rE = r[0];
+        
+        for(int cont = 1; cont < 4;cont++){
+            if (menor > r[cont])
+                menor = r[cont];
+            if (maior < r[cont])
+                maior = r[cont];
+            rE += r[cont];
+        }
+        return "Resistencia Equivalente: "+ rE +"\nA maior resistencia eh: "+ maior +"\nA menor resistencia eh:"+ menor;
+    }    
+
+    public static void quest8(){
+        
+        for(int cont = 3; cont > 0; cont--){
+            if(login(JOptionPane.showInputDialog("Login: "),JOptionPane.showInputDialog("Senha: "))){
+                JOptionPane.showMessageDialog(null,"Login e senha aceitos");
+                break;
+            }
+            else{
+                if(cont - 1 == 0){
+                    JOptionPane.showMessageDialog(null,"Tentativas Over");
+                    break;
+                }                    
+                JOptionPane.showMessageDialog(null,"Falha, verifique login e senha\nVoce tem mais "+(cont-1));                
+            }
+        }
+            
+    }
+    
+    public static boolean login(String login, String senha){
+        
+        return "java8".equals(login) && "java8".equals(senha);
+        
+    }
+    public static void quest9(){
+        int numero = Integer.parseInt(JOptionPane.showInputDialog("Forneca Numero"));
+        String aux = "";
+        for(int cont = 1; cont < 11; cont++){
+            aux += numero + "x" + cont + "=" + (numero*cont)+"\n";                        
+        }
+        JOptionPane.showMessageDialog(null, aux);
+    }
+    
+    
 }
