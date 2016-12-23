@@ -1,0 +1,34 @@
+1ª)a) Sun microsystem
+
+b) Static
+
+c) main
+
+d) public
+
+
+2ª) letra d
+
+
+3ª) letra c
+
+
+4ª) O mesmo programa pode rodar em diversos sistemas operacionais
+
+
+5ª) letra a
+
+
+6ª) letra c
+
+
+7ª) Scala
+
+
+8ª) pass;
+
+
+9ª) Tranformar um codigo java em bytecode
+
+
+10ª) letra d
