@@ -61,4 +61,6 @@ public class ExerciseJava8 {
         }while(auxQ > 0 && auxQ <=9);
             
     }
+    /*questao 5 Elabore uma classe que apresente uma espécie de menu usando JOptionPane. Para cada opção
+      escolhida, execute um dos exercícios anteriores.*/
 }
