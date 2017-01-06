@@ -10,20 +10,22 @@ package domain;
  * @author ClienteAOC
  */
 public class Fibonacci {
+    public int t1 = 1;
+    public int t2 = 1;
+    public String message = t1 + " " + t2 + " ";
     
-    
-    public String getFibonacci(int t1 , int t2){       
-        String message = t1 + " " + t2;
-        System.out.print("teste");
-        if(t2 > 8){
-            return message;
+    public void getFibonacci(int t1 , int t2, String message){       
+
+        if(t2 > 5){
+            System.out.println(message);
         }    
         else{
             t2 += t1;
             t1 = t2 - t1;
-            message += t2; 
-            getFibonacci(t1,t2) ;
+            message += t2 + " "; 
+            getFibonacci(t1,t2,message) ;
         }
-        return message;
     }
+    
+  
 }

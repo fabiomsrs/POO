@@ -6,6 +6,7 @@
 package AppFuncionario;
 
 import domain.Fibonacci;
+import domain.FibonacciArray;
 
 /**
  *
@@ -13,29 +14,20 @@ import domain.Fibonacci;
  */
 public class AppFibonacci {
     public static void main(String []args){
-        int t1 = 1;
-        int t2 = 1;
-        String fibonacci = getFibonacci(t1 , t2);
-        System.out.println(fibonacci);
-        /*int t2 = 1;
-        Fibonacci f1 = new Fibonacci();
-        System.out.print(f1.getFibonacci(t1, t2));*/
+
+        /*Fibonacci f1 = new Fibonacci();
+        f1.getFibonacci(f1.t1, f1.t2, f1.message);*/
         
+        /*questão 2 Por que o modo acima é extremamente mais lento para calcular a série do que o modo iterativo (que se usa um laço)?
+        Pois o modo acima executa varias instancias de funções, enquanto o laço não
+        */
         
+        /*questão 3 Não é possivel colocar mais de um statemant em java, então deixa quieto*/
         
+        FibonacciArray f1 = new FibonacciArray(); 
+        f1.t[0] = 1;
+        f1.t[1] = 1;
+        f1.getFibonacci(f1.t, f1.message, 2);
     }
-    public static String getFibonacci(int t1 , int t2){       
-        String message = t1 + " " + t2;
-        System.out.print("teste");
-        if(t2 > 8){
-            return message;
-        }    
-        else{
-            t2 += t1;
-            t1 = t2 - t1;
-            message += t2; 
-            getFibonacci(t1,t2) ;
-        }
-        return message;
-    }
+  
 }

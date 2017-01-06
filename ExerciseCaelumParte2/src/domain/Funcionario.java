@@ -12,7 +12,7 @@ package domain;
 public class Funcionario {
     public String nome;
     public String departamento;
-    public Data dataEntrada;
+    public Data dataEntrada = new Data();
     public String rg;
     public double salario;
     
@@ -41,7 +41,7 @@ public class Funcionario {
     }
     @Override
     public String toString() {
-        return "Nome: " + "Salario: " + this.salario + this.nome + "\nDepartamento: " + this.departamento + "\nData de entrada: " + this.dataEntrada + "\nRg: " + this.rg;
+        return "Nome: " + this.nome + "\nSalario: " + this.salario + "\nDepartamento: " + this.departamento + "\nRg: " + this.rg;
     }
         
     
