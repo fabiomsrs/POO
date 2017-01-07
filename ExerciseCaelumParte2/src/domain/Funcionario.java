@@ -10,19 +10,45 @@ package domain;
  * @author ClienteAOC
  */
 public class Funcionario {
-    public String nome;
-    public String departamento;
-    public Data dataEntrada = new Data();
-    public String rg;
-    public double salario;
+    private String nome;
+    private String departamento;
+    private Data dataEntrada = new Data();
+    private String rg;
+    private double salario;
+    private static int indentificador = 0;
     
-    public void numeroDeClientes(int num){
+    public static int getIdentificador(){
+        return Funcionario.indentificador;
+    }
+    
+    public Funcionario(String nome){
+        this.nome = nome;
+        Funcionario.indentificador++;
+    }
+    
+    public String getNome(){
+        return this.nome;
+    }
+    
+    public Funcionario(){
+        Funcionario.indentificador++;
+    }
+    
+    public double getSalario(){
+        return this.salario;
+    }
+    
+    public void setSalario(double salario){
+        this.salario = salario;
+    }
+    
+    public void setNumeroDeClientes(int num){
         if(num > 100){
-            this.bonus(100);
+            this.setBonus(100);
         }
     }
     
-    public double bonus(int bonus){
+    public double setBonus(int bonus){
         return salario + bonus;
     }
     

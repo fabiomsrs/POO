@@ -10,5 +10,9 @@ package domain;
  * @author ClienteAOC
  */
 public class PessoaFisica {
+    private String cpf;
     
+    public String isValido(){
+        return this.cpf + " Eh valido";
+    }
 }

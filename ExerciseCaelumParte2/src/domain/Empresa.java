@@ -10,12 +10,16 @@ package domain;
  * @author ClienteAOC
  */
 public class Empresa {
-    public String nome;
-    public String cnpj;
-    public Funcionario[] empregados = new Funcionario[10];
+    private String nome;
+    private String cnpj;
+    private Funcionario[] empregados;
     private int contFuncionario = 0;
     
-    public void adiciona(Funcionario f){     
+    public Empresa(int quantidadeFuncionario){
+        this.empregados = new Funcionario[quantidadeFuncionario];
+    }
+    
+    public void setAdiciona(Funcionario f){     
         try{
         this.empregados[this.contFuncionario] = f;              
         this.contFuncionario += 1;
@@ -30,17 +34,17 @@ public class Empresa {
         }
     }   
     
-    public void mostraEmpregados(){
+    public void getMostraEmpregados(){
         try{
         for(Funcionario f : this.empregados){
-            System.out.println("Funcionario: " + f.nome + " Salario: " + f.salario);
+            System.out.println("Funcionario: " + f.getNome() + " Salario: " + f.getSalario());
         }
         }catch(NullPointerException e){               
         }
     }
     public void contem(Funcionario f){
         try{
-            System.out.println("Funcionaro " + f.nome + " confirmado");        
+            System.out.println("Funcionaro " + f.getNome() + " confirmado");        
         }catch(NullPointerException e){            
             System.out.println("Nao existe esse funcionario");
         }

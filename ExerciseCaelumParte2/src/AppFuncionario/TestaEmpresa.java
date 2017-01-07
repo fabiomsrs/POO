@@ -17,7 +17,7 @@ public class TestaEmpresa {
     public static void main(String []args){
         Funcionario f1 = new Funcionario();
         Funcionario f2 = new Funcionario();        
-        Empresa ep1 = new Empresa();      
+        Empresa ep1 = new Empresa(10);      
         /*ep1.adiciona(f1);
         ep1.adiciona(f2);
         ep1.empregados[0].salario = 10;
@@ -28,9 +28,9 @@ public class TestaEmpresa {
         ep1.empregados[2].dataEntrada.ano = 10;*/
         
         for(int i = 0; i < 18; i++){
-            ep1.adiciona(f2);
+            ep1.setAdiciona(f2);
         }
-        ep1.mostraEmpregados();
+        ep1.getMostraEmpregados();
         /* questao 6
         for(Funcionario f : ep1.empregados){
         ep1.contem(f);
