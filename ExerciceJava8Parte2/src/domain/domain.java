@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author ClienteAOC
  */
-public class domain {
+public class domain extends Estacionamento {
     
     public static void quest1(){
         double[] notas = new double[5];
@@ -91,49 +91,46 @@ public class domain {
         }
         JOptionPane.showMessageDialog(null, "Pares: "+messagePar+ "\nImpares: "+messageImpar);        
     }
-    
-    public static void quest5(){  
+    public static void quest5() {
         String menu;
         String[] placa = new String[10];
         int num;
-        do{
+        do {
             menu = JOptionPane.showInputDialog("1-Entrada, 2-Saida, 3-Listar, 4-Encerrar Programa");
-            switch(menu){
+            switch (menu) {
                 case "1":
                     num = Integer.parseInt(JOptionPane.showInputDialog("Qual o numero da vaga 0-9"));
                     placa[num] = JOptionPane.showInputDialog("Digite o numero da placa");
-                    JOptionPane.showMessageDialog(null,"Vaga "+num+" preenchida");
+                    JOptionPane.showMessageDialog(null, "Vaga " + num + " preenchida");
                     break;
                 case "2":
                     num = Integer.parseInt(JOptionPane.showInputDialog("Qual o numero da vaga 0-9"));
-                    if(placa[num] == null){
-                        JOptionPane.showMessageDialog(null,"Vaga ja se encontra vazia");                    
-                    }
-                    else{
+                    if (placa[num] == null) {
+                        JOptionPane.showMessageDialog(null, "Vaga ja se encontra vazia");
+                    } else {
                         placa[num] = null;
-                        JOptionPane.showMessageDialog(null,"Vaga liberada");
+                        JOptionPane.showMessageDialog(null, "Vaga liberada");
                     }
                     break;
                 case "3":
                     String message = "";
-                    for(int i = 0; i < 10; i++){
-                        if(placa[i] == null)
-                            message += "Vaga " + i + ": "+ "Vazio";
-
-                        else
+                    for (int i = 0; i < 10; i++) {
+                        if (placa[i] == null) {
+                            message += "Vaga " + i + ": " + "Vazio";
+                        } else {
                             message += "Vaga " + i + ": " + placa[i];
-
+                        }
                         message += "\n";
                     }
-                    JOptionPane.showMessageDialog(null,message);
+                    JOptionPane.showMessageDialog(null, message);
                     break;
                 case "4":
-                    JOptionPane.showMessageDialog(null,"BYE");
+                    JOptionPane.showMessageDialog(null, "BYE");
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null,"Numero invalido");
+                    JOptionPane.showMessageDialog(null, "Numero invalido");
                     break;
             }
-        }while(!"4".equals(menu));
+        } while (!"4".equals(menu));
     }
 }
