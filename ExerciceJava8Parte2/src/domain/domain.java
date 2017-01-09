@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author ClienteAOC
  */
-public class domain extends Estacionamento {
+public class domain {
     
     public static void quest1(){
         double[] notas = new double[5];

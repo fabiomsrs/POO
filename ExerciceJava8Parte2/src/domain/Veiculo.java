@@ -10,11 +10,13 @@ package domain;
  * @author aluno
  */
 public class Veiculo {
+    String modelo;
     String placa;   
     public int numVaga;
     
-    public Veiculo(String placa){
+    public Veiculo(String placa, String modelo, int numVaga){
         this.placa = placa;
-        
+        this.modelo = modelo;
+        this.numVaga = numVaga;        
     }
 }
