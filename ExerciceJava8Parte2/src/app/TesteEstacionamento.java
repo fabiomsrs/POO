@@ -6,7 +6,6 @@
 package app;
 
 import domain.Estacionamento;
-import domain.Veiculo;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,12 +16,12 @@ public class TesteEstacionamento {
     
     public static void main(String []args){
         //Só excuta o main professor, ja ta tudo implementado
-        Estacionamento e = null;        
-        Estacionamento.instancia(e);
+        Estacionamento e = Estacionamento.instancia();                
         int num = 0; 
         
+        
         while(num != 4){
-            num = Integer.parseInt(JOptionPane.showInputDialog("1-Entrada\n 2-Saida\n3-Listar situacao atual\n4-Fim do Programa"));
+            num = Integer.parseInt(JOptionPane.showInputDialog("1-Entrada\n2-Saida\n3-Listar situacao atual\n4-Fim do Programa"));
             switch(num){
                 case 1:
                     e.getEntrada();
@@ -32,8 +31,9 @@ public class TesteEstacionamento {
                     break;
                 case 3:
                     JOptionPane.showMessageDialog(null,e.getListarVagas());
+                    break;
                 case 4:
-                    JOptionPane.showMessageDialog(null,"BYE");
+                    JOptionPane.showMessageDialog(null,"bye");
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,"Numero Invalido");
@@ -42,6 +42,6 @@ public class TesteEstacionamento {
             }
         }
     }
-   
-    
 }
+    
+

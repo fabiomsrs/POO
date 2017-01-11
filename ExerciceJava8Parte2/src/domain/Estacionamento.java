@@ -13,28 +13,27 @@ import javax.swing.JOptionPane;
  */
 public class Estacionamento{
         private static Estacionamento instancia;
-        static int contVeiculo = 0;        
+        static int qtdVeiculo = 0;        
         Veiculo[] v = new Veiculo[10];
-        Veiculo[] vaga = new Veiculo[10];
-                   
+        Veiculo[] vaga = new Veiculo[10];       
         private Estacionamento(){
            
         }
         
-        public static Estacionamento instancia(Estacionamento e){
-            if(Estacionamento.instancia == null){
-                Estacionamento.instancia = new Estacionamento();
-                return Estacionamento.instancia; 
+        public static Estacionamento instancia(){
+            if(Estacionamento.instancia == null){                
+                Estacionamento.instancia = new Estacionamento();               
             }
            return Estacionamento.instancia;
         }
        
-        public void getEntrada(){
+        public void getEntrada(){           
             Veiculo proto = setVeiculo();
-            this.v[contVeiculo] = proto; 
-            contVeiculo += 1;
+            
+            this.v[qtdVeiculo] = proto; 
+            qtdVeiculo += 1;
                 for(int i = 0; i < 10; i++){                        
-                    if(vaga[i] == null){                        
+                    if(vaga[i] == null){                            
                         vaga[i] = this.v[i];
                         break;
                     }                        
@@ -44,14 +43,15 @@ public class Estacionamento{
             String m = JOptionPane.showInputDialog("Digite o modelo do veiculo");
             String p = JOptionPane.showInputDialog("Digite o numero da placa");
           
-            for(int i = 0;i < contVeiculo; i++){
-                if(vaga[contVeiculo].getPlaca() == p){
+            for(int i = 0;i < qtdVeiculo; i++){
+                
+                if(vaga[i].getPlaca().equals(p)){                 
                     JOptionPane.showMessageDialog(null, "Erro!!!  Esse veiculo ja consta no sistema");
                     return null;
                 }
             }
-            Veiculo v = new Veiculo(p,m);
-            return v;
+            Veiculo veiculo = new Veiculo(p,m);
+            return veiculo;
         }
         public void getSaida(){
             int num = Integer.parseInt(JOptionPane.showInputDialog("Qual o numero da vaga 0-9"));
@@ -59,7 +59,7 @@ public class Estacionamento{
                 JOptionPane.showMessageDialog(null,"Este carro nao consta no estacionamento");
             else{
                 vaga[num] = null;
-                JOptionPane.showMessageDialog(null,"Vaga" + num + "liberada");            
+                JOptionPane.showMessageDialog(null,"Vaga " + num + " liberada");            
             }
         }
         
