@@ -10,13 +10,20 @@ package domain;
  * @author aluno
  */
 public class Veiculo {
-    String modelo;
-    String placa;   
-    public int numVaga;
+    private String modelo;
+    private String placa;   
     
-    public Veiculo(String placa, String modelo, int numVaga){
+    
+    public Veiculo(String placa, String modelo){
         this.placa = placa;
         this.modelo = modelo;
-        this.numVaga = numVaga;        
+                
+    }
+    
+    public String getPlaca(){
+        return this.placa;
+    }
+    public String getModelo(){
+        return this.modelo;
     }
 }
