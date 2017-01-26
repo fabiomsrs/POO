@@ -12,7 +12,7 @@ package domain;
 public class ContaCorrente extends Conta{
     
     public void atualiza(double taxa){
-        super.atualiza(taxa * 2);
+        this.saldo = this.getSaldo() + taxa * 2;
     }
     
     public void deposito(double valor) {

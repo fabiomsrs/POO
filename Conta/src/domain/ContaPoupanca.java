@@ -12,6 +12,6 @@ package domain;
 public class ContaPoupanca extends Conta{
     
     public void atualiza(double taxa){
-        super.atualiza(taxa * 3);
+        this.saldo = this.getSaldo() + taxa * 3;
     }
 }
