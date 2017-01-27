@@ -39,6 +39,7 @@ public class TesteConta {
         }        
         
         System.out.println(adc.getSaldoTotal());
+       
         
     }
     

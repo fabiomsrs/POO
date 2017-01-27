@@ -12,8 +12,13 @@ package domain;
 public abstract class Conta {
     protected double saldo = 0;
     
-    public void deposito(double valor){
-        this.saldo += valor;
+    public void deposito(double valor)throws InvalidValueException{
+        if(valor < 0){
+            throw new InvalidValueException(valor);
+        }
+        else{
+            this.saldo += valor;
+        }
     }
     public void saque(double valor){
         this.saldo -= valor;
