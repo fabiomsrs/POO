@@ -10,5 +10,5 @@ package Domain;
  * @author ClienteAOC
  */
 public interface Tributavel {
-    
+    public double calcularTributo();   
 }
