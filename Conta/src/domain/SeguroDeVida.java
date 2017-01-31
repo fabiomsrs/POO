@@ -9,19 +9,11 @@ package domain;
  *
  * @author ClienteAOC
  */
-public class ContaCorrente extends Conta implements Tributavel{
-    
-    public void atualiza(double taxa){
-        this.saldo = this.getSaldo() + taxa * 2;
-    }
-    
-    public void deposito(double valor) {
-        super.deposito(valor - 0.10);
-    }
+public class SeguroDeVida implements Tributavel {
 
     @Override
     public double calculaTributo() {
-        return this.getSaldo() * 0.01;
+        return 42;
     }
     
 }
