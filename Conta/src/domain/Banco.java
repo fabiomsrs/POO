@@ -5,28 +5,35 @@
  */
 package domain;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  *
  * @author ClienteAOC
  */
 public class Banco {
     private static int qtdConta = 0;
-    private Conta []conta = new Conta[10];
+    private List<Conta> conta = new ArrayList();
+    private String nome;
+    private Map<String,Conta> mapaContas = new HashMap();
+        
     
-    public void adicionConta(Conta c){
-        if(qtdConta == 10){
-            System.out.println("Conta lotada");            
-        }
-        else{
-            conta[qtdConta] = c;
-            qtdConta++;
-        }
+    public void adicionConta(Conta c, String nome){       
+        mapaContas.put(nome, c);
+        conta.add(c);
     }
-    public Conta pegaConta(int x){
-        return conta[x];
+    
+    public Conta pegaConta(String nome){
+        return this.mapaContas.get(nome);
+    }
+    public Conta pegaConta(int i){
+        return conta.get(i);
     }
     public int pegaTotalDeContas(){
-        return qtdConta;
+        return conta.size();
     }
     
     

@@ -28,9 +28,9 @@ public class TesteConta {
         
         Banco b = new Banco();
         
-        b.adicionConta(c);
-        b.adicionConta(cc);
-        b.adicionConta(cp);
+        b.adicionConta(c,"");
+        b.adicionConta(cc,"");
+        b.adicionConta(cp,"");
         
         
         AtualizadorDeContas adc = new AtualizadorDeContas(0.01);
