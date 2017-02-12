@@ -5,32 +5,18 @@
  */
 package domain;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-
 /**
  *
  * @author ClienteAOC
  */
-public class Tema {
-    String conteudo;
+class Palavra {
+    private String conteudo;
     
-    
-    public Tema(){
-        
-    }
-    public Tema(String conteudo){
+    public Palavra(String conteudo){
         this.conteudo = conteudo;
     }
     
-    public String getTema(){
+    public String getPalavra(){
         return this.conteudo;
     }
-        
-    
-    
 }

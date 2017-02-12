@@ -24,6 +24,6 @@ public class TesteConta2 {
         test.add(cc);
         test.add(cc1);
         
-        System.out.println(test);
+        System.out.println(test+ " "+ cc.equals(cc1));
     }
 }
